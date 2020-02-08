@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="StudentPortal.Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server" class="mainPage">
+    <div style="width:100%;font-size:20px;padding-bottom:30px;">
+        <asp:ContentPlaceHolder ID="header" runat="server">
+            
+        </asp:ContentPlaceHolder>
+        <asp:Label ID="lblUsername" runat="server" Text=""></asp:Label>
+        <asp:HyperLink ID="hyLogout" runat="server" NavigateUrl="~/login.aspx?msg=logout" style="float:right;">Sign Out</asp:HyperLink>
+    </div>
+    <div style="width:20%;float:left;">
+        <a href="Home.aspx" id="home" runat="server">Home</a>
+        <br /><br />
+        <a href="EditProfile.aspx" id="editProfile" runat="server">Edit Profile</a>
+        <br /><br />
+        <a href="ChangePass.aspx" id="changePass" runat="server">Change Password</a>
+        <br /><br />
+        <a href="Downloads.aspx" id="download" runat="server">View Downloads</a>
+    </div>
+    <div style="width:80%;float:left;">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div style="width:100%;float:left;margin-left:20%;">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
